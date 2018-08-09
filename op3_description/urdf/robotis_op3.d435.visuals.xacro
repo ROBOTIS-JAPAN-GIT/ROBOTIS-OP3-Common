@@ -236,4 +236,15 @@
     <!-- </material> -->
   </xacro:macro>
 
+  <!-- camera base joint -->
+  <xacro:macro name="insert_mesh_camera_base_link">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://realsense2_camera//meshes/d435.dae"  scale="1.000 1.000 1.000"/>
+    </geometry>
+    <!-- <material name="Grey"> -->
+    <!--   <color rgba="0.60 0.60 0.60 1.0"/> -->
+    <!-- </material> -->
+  </xacro:macro>
+
 </robot>
