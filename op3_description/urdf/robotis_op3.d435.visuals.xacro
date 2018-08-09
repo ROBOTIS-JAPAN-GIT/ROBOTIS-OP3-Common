@@ -238,7 +238,7 @@
 
   <!-- camera base joint -->
   <xacro:macro name="insert_mesh_camera_base_link">
-    <origin xyz="0 0 0" rpy="0 0 0" />
+    <origin xyz="0 0 0" rpy="${pi/2} 0 ${pi/2}" />
     <geometry>
       <mesh filename="package://realsense2_camera//meshes/d435.dae"  scale="1.000 1.000 1.000"/>
     </geometry>

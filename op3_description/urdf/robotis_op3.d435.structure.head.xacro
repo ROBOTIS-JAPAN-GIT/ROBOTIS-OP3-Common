@@ -71,7 +71,7 @@
   <joint name="camera_base" type="fixed">
     <parent link="head_tilt_link"/>
     <child link="camera_base_link"/>
-    <origin xyz="0 0 0" rpy="0 0 0" /> <!-- need to be modified -->
+    <origin xyz="${-0.0041+0.0149} -0.019 ${0.04025+0.0125}" rpy="0 0 0"/>
   </joint>
 
   <!-- camera base link -->
