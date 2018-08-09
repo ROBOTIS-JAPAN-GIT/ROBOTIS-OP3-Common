@@ -69,7 +69,7 @@
 
   <!-- camera base joint -->
   <joint name="camera_base" type="fixed">
-    <parent link="head_tile_link"/>
+    <parent link="head_tilt_link"/>
     <child link="camera_base_link"/>
     <origin xyz="0 0 0" rpy="0 0 0" /> <!-- need to be modified -->
   </joint>
