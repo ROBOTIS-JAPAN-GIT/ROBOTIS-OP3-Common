@@ -4,8 +4,8 @@
   <xacro:include filename="$(find op3_description)/urdf/robotis_op3.d435.visuals.xacro" />
   <xacro:include filename="$(find op3_description)/urdf/robotis_op3.inertia.xacro" />
 
-  <xacro:include filename="$(find op3_description)/urdf/robotis_op3.structure.rleg.xacro" />
-  <xacro:include filename="$(find op3_description)/urdf/robotis_op3.structure.lleg.xacro" />
+  <xacro:include filename="$(find op3_description)/urdf/robotis_op3.d435.ft.structure.rleg.xacro" />
+  <xacro:include filename="$(find op3_description)/urdf/robotis_op3.d435.ft.structure.lleg.xacro" />
   <xacro:include filename="$(find op3_description)/urdf/robotis_op3.structure.rarm.xacro" />
   <xacro:include filename="$(find op3_description)/urdf/robotis_op3.structure.larm.xacro" />
   <xacro:include filename="$(find op3_description)/urdf/robotis_op3.d435.structure.head.xacro" />
