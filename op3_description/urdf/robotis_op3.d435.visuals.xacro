@@ -75,7 +75,7 @@
   <xacro:macro name="insert_mesh_r_ank_roll_link">
     <origin xyz="0 0 0" rpy="0 0 0" />
     <geometry>
-      <mesh filename="package://op3_description/meshes/rl6.stl"  scale="0.001 0.001 0.001"/>
+      <mesh filename="package://op3_description/meshes/rl6_ft.stl"  scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="Grey">
       <color rgba="0.60 0.60 0.60 1.0"/>
@@ -141,7 +141,7 @@
   <xacro:macro name="insert_mesh_l_ank_roll_link">
     <origin xyz="0 0 0" rpy="0 0 0" />
     <geometry>
-      <mesh filename="package://op3_description/meshes/ll6.stl"  scale="0.001 0.001 0.001"/>
+      <mesh filename="package://op3_description/meshes/ll6_ft.stl"  scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="Grey">
       <color rgba="0.60 0.60 0.60 1.0"/>
