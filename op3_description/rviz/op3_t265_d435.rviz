@@ -8,7 +8,7 @@ Panels:
         - /Status1
         - /RobotModel1
         - /TF1
-        - /Image1
+        - /TF1/Frames1
       Splitter Ratio: 0.5
     Tree Height: 775
   - Class: rviz/Selection
@@ -53,7 +53,7 @@ Visualization Manager:
       Plane Cell Count: 10
       Reference Frame: <Fixed Frame>
       Value: true
-    - Alpha: 1
+    - Alpha: 0.5
       Class: rviz/RobotModel
       Collision Enabled: false
       Enabled: true
@@ -223,97 +223,134 @@ Visualization Manager:
       Enabled: true
       Frame Timeout: 15
       Frames:
-        All Enabled: true
+        All Enabled: false
+        camera_accel_frame:
+          Value: false
+        camera_accel_optical_frame:
+          Value: false
+        camera_fisheye1_frame:
+          Value: false
+        camera_fisheye1_optical_frame:
+          Value: false
+        camera_fisheye2_frame:
+          Value: false
+        camera_fisheye2_optical_frame:
+          Value: false
+        camera_gyro_frame:
+          Value: false
+        camera_gyro_optical_frame:
+          Value: false
+        camera_link:
+          Value: false
+        camera_pose_frame:
+          Value: true
+        odom:
+          Value: true
         op3/body_link:
           Value: true
         op3/cam_gazebo_link:
-          Value: true
+          Value: false
         op3/camera_bottom_screw_frame:
-          Value: true
+          Value: false
         op3/camera_color_frame:
-          Value: true
+          Value: false
         op3/camera_color_optical_frame:
-          Value: true
+          Value: false
         op3/camera_depth_frame:
-          Value: true
+          Value: false
         op3/camera_depth_optical_frame:
-          Value: true
+          Value: false
         op3/camera_left_ir_frame:
-          Value: true
+          Value: false
         op3/camera_left_ir_optical_frame:
-          Value: true
+          Value: false
         op3/camera_link:
-          Value: true
+          Value: false
         op3/camera_right_ir_frame:
-          Value: true
+          Value: false
         op3/camera_right_ir_optical_frame:
-          Value: true
+          Value: false
         op3/head_pan_link:
           Value: true
         op3/head_tilt_link:
           Value: true
         op3/l_ank_pitch_link:
-          Value: true
+          Value: false
         op3/l_ank_roll_link:
-          Value: true
+          Value: false
         op3/l_el_link:
-          Value: true
+          Value: false
         op3/l_hip_pitch_link:
-          Value: true
+          Value: false
         op3/l_hip_roll_link:
-          Value: true
+          Value: false
         op3/l_hip_yaw_link:
-          Value: true
+          Value: false
         op3/l_knee_link:
-          Value: true
+          Value: false
         op3/l_sho_pitch_link:
-          Value: true
+          Value: false
         op3/l_sho_roll_link:
-          Value: true
+          Value: false
         op3/r_ank_pitch_link:
-          Value: true
+          Value: false
         op3/r_ank_roll_link:
-          Value: true
+          Value: false
         op3/r_el_link:
-          Value: true
+          Value: false
         op3/r_hip_pitch_link:
-          Value: true
+          Value: false
         op3/r_hip_roll_link:
-          Value: true
+          Value: false
         op3/r_hip_yaw_link:
-          Value: true
+          Value: false
         op3/r_knee_link:
-          Value: true
+          Value: false
         op3/r_sho_pitch_link:
-          Value: true
+          Value: false
         op3/r_sho_roll_link:
-          Value: true
+          Value: false
       Marker Scale: 0.200000003
       Name: TF
-      Show Arrows: false
+      Show Arrows: true
       Show Axes: true
       Show Names: true
       Tree:
+        odom:
+          {}
         op3/body_link:
           op3/head_pan_link:
             op3/head_tilt_link:
+              camera_pose_frame:
+                camera_link:
+                  camera_accel_frame:
+                    camera_accel_optical_frame:
+                      {}
+                  camera_fisheye1_frame:
+                    camera_fisheye1_optical_frame:
+                      {}
+                  camera_fisheye2_frame:
+                    camera_fisheye2_optical_frame:
+                      {}
+                  camera_gyro_frame:
+                    camera_gyro_optical_frame:
+                      {}
               op3/cam_gazebo_link:
                 {}
               op3/camera_bottom_screw_frame:
-                {}
-              op3/camera_link:
-                op3/camera_depth_frame:
-                  op3/camera_color_frame:
-                    op3/camera_color_optical_frame:
+                op3/camera_link:
+                  op3/camera_depth_frame:
+                    op3/camera_color_frame:
+                      op3/camera_color_optical_frame:
+                        {}
+                    op3/camera_depth_optical_frame:
                       {}
-                  op3/camera_depth_optical_frame:
-                    {}
-                  op3/camera_left_ir_frame:
-                    op3/camera_left_ir_optical_frame:
-                      {}
-                  op3/camera_right_ir_frame:
-                    op3/camera_right_ir_optical_frame:
-                      {}
+                    op3/camera_left_ir_frame:
+                      op3/camera_left_ir_optical_frame:
+                        {}
+                    op3/camera_right_ir_frame:
+                      op3/camera_right_ir_optical_frame:
+                        {}
           op3/l_hip_yaw_link:
             op3/l_hip_roll_link:
               op3/l_hip_pitch_link:
@@ -338,15 +375,9 @@ Visualization Manager:
                 {}
       Update Interval: 0
       Value: true
-    - Alpha: 1
-      Class: rviz_plugin_tutorials/Imu
-      Color: 204; 51; 204
+    - Class: rviz_plugin_tutorials/Imu
       Enabled: true
-      History Length: 1
       Name: Imu
-      Topic: /op2_imu_data
-      Unreliable: false
-      Value: true
     - Class: rviz/Image
       Enabled: false
       Image Topic: /image_out
@@ -384,7 +415,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 0.989799321
+      Distance: 1.1791147
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
@@ -399,10 +430,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 0.199797988
+      Pitch: 0.249798313
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 5.76356554
+      Yaw: 0.805384636
     Saved: ~
 Window Geometry:
   Displays:
