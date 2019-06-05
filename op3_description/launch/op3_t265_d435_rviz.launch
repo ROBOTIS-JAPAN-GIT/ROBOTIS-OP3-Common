@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<launch>
+  <param name="robot_description" command="$(find xacro)/xacro.py '$(find op3_description)/urdf/robotis_op3.t265.d435.urdf.xacro'"/>
+
+  <!-- send joint values -->
+  <node pkg="joint_state_publisher" type="joint_state_publisher" name="joint_state_publisher">
+    <param name="use_gui" value="TRUE"/>
+  </node>
+
+  <!-- Combine joint values -->
+  <node pkg="robot_state_publisher" type="state_publisher" name="robot_state_publisher">
+    <param name="tf_prefix" value="op3" />
+    <remap from="/joint_states" to="/robotis/present_joint_states" />
+  </node>
+
+  <!-- static TF pub -->
+  <!-- <node pkg="tf" type="static_transform_publisher" name="head_tilt_to_camera_link" -->
+  <!--       args="0.0262 -0.019 0.016 0 0 0 1 camera_pose_frame op3/body_link 200" /> -->
+
+  <node pkg="tf" type="static_transform_publisher" name="head_tilt_to_camera_link"
+        args="0.0262 -0.019 0.016 0 0 0 1 op3/head_tilt_link camera_pose_frame 200" />
+
+  <!-- <node pkg="tf" type="static_transform_publisher" name="head_tilt_to_camera_link" -->
+  <!--       args="0 0 0 0 0 0 1 camera_odom_frame op3/body_link 200" /> -->
+
+  <!-- Show in Rviz -->
+  <node pkg="rviz" type="rviz" name="rviz" args="-d $(find op3_description)/rviz/op3_t265_d435.rviz"/>
+</launch>
